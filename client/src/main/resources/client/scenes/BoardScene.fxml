@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.HelpPopup?>
+<?import client.components.IconButton?>
+<?import javafx.scene.layout.*?>
+<AnchorPane fx:id="container"
+            style="-fx-background-color: #3D0707;"
+            fx:controller="client.scenes.BoardSceneController"
+            prefWidth="1000"
+            prefHeight="600"
+            xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+
+
+</AnchorPane>

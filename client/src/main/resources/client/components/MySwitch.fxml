@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<?import javafx.scene.layout.VBox?>
+<fx:root type="AnchorPane" styleClass="MySwitch" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+    <Rectangle fx:id="background" arcHeight="18.0" arcWidth="18.0" fill="#d9d9d9" height="18.0" stroke="BLACK" strokeWidth="0" width="40.0" />
+    <VBox fx:id="knob" styleClass="knob" focusTraversable="true"/>
+</fx:root>

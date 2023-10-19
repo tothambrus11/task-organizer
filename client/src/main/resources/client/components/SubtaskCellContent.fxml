@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<fx:root alignment="CENTER"
+         type="HBox"
+         spacing="8.0"
+         xmlns="http://javafx.com/javafx/19"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets left="12.0" right="12.0"/>
+    </padding>
+
+    <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+        <HBox prefHeight="40" prefWidth="40" alignment="CENTER">
+            <Checkbox fx:id="completedCheck"/>
+        </HBox>
+        <TextInput fx:id="titleField" styleClass="titleField" prefWidth="0" promptText="Title..." HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <IconButton fx:id="deleteButton" size="SMALL" source="/client/images/remove.png" styleClass="thingToHide"/>
+    <VBox fx:id="vBox" opacity="0.0" alignment="CENTER" styleClass="thingToHide">
+        <IconButton fx:id="upButton" size="EXTRA_SMALL" source="/client/icons/up_extra_small.png"/>
+        <IconButton fx:id="downButton" size="EXTRA_SMALL" source="/client/icons/down_extra_small.png"/>
+    </VBox>
+</fx:root>

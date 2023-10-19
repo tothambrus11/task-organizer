@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<fx:root type="PopUp" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox maxWidth="430"
+          spacing="8.0"
+          style="-fx-background-color: white; -fx-background-radius: 5; -fx-padding: 12px;">
+        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="400" minHeight="-Infinity" minWidth="-Infinity">
+            <TextButton fx:id="deleteButton" text="DELETE"/>
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Text text="Update Card" styleClass="popup-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <TextButton fx:id="escapeButton" text="ESC"/>
+        </HBox>
+
+        <!-- TITLE -->
+        <TextInput fx:id="titleField"/>
+
+        <!-- DESCRIPTION -->
+        <Text styleClass="detailsTitle" text="Description"/>
+        <TextAreaInput fx:id="descriptionField"/>
+
+        <!-- TAGS -->
+        <HBox alignment="CENTER">
+            <HBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                <Text text="Tags" styleClass="detailsTitle"/>
+            </HBox>
+            <ComboBox editable="true" fx:id="tagInput" promptText="+ Add Tag"/>
+        </HBox>
+        <HBox fx:id="tagListContainer"/>
+
+
+        <!-- HIGHLIGHT -->
+        <VBox spacing="8">
+            <Text styleClass="detailsTitle" text="Highlight"/>
+            <ComboBox prefWidth="Infinity" editable="true" promptText="Default" fx:id="highlightSelection"/>
+        </VBox>
+
+        <!-- SUBTASKS -->
+        <HBox alignment="CENTER">
+            <HBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                <Text text="Subtasks" styleClass="detailsTitle"/>
+            </HBox>
+            <IconButton fx:id="addTaskButton" GridPane.columnIndex="1" GridPane.halignment="RIGHT" size="SMALL"
+                        source="/client/icons/add_button_small.png"/>
+        </HBox>
+
+        <HBox fx:id="subTaskListContainer" VBox.vgrow="ALWAYS" style="-fx-padding: 0 -12px 0 -12px"/>
+
+    </VBox>
+    <padding>
+        <Insets topRightBottomLeft="32"/>
+    </padding>
+</fx:root>

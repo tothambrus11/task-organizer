@@ -1,0 +1,5 @@
+@use "../common";
+.bottom-action-bar {
+  -fx-background-color: common.$dark-button-bg;
+  -fx-background-radius: 3px;
+}

@@ -1,0 +1,62 @@
+@use "../common";
+
+.TextInput{
+    -fx-prompt-text-fill: gray;
+    -fx-border-width: 1px;
+    -fx-border-color: common.$light-border;
+    -fx-border-radius: 3px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-box-border: transparent;
+    -fx-effect: null;
+    -fx-box-border: transparent;
+    -fx-background-color: transparent;
+    -fx-background-radius: 3;
+}
+
+.TextInput, TextInput *{
+    -fx-font-family: "Inter" ;
+    -fx-font-weight: 400 !important;
+    -fx-font-size: 16px;
+}
+
+.Title{
+    -fx-font-family: "Inter SemiBold" !important;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right center;
+    -fx-padding: 0 0 0 0;
+    -fx-border-width: 0px;
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-box-border: transparent;
+    -fx-effect: null;
+    -fx-box-border: transparent;
+    -fx-background-color: transparent;
+}
+
+.KeyJoinText{
+    -fx-background-image: url("/client/images/lock.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 16 16;
+    -fx-background-position: 12px center;
+
+}
+
+.TextInput .scroll-bar:vertical {
+    //-fx-pref-width: 1;
+    //-fx-opacity: 0;
+}
+
+.TextInput:focused{
+    -fx-border-color: black;
+}
+
+.TextInput .content {
+    -fx-background-color: white;
+}
+
+.TextInput:focus-visible{
+    @include common.focusRingStyle();
+}

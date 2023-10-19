@@ -1,0 +1,17 @@
+@use "../common";
+
+.NewBoardButton {
+  -fx-background-color: common.$dark-button-bg;
+  -fx-font-size: 14px;
+  -fx-pref-height: 44px;
+  -fx-text-fill: white;
+  -fx-graphic-text-gap: 8px;
+  -fx-padding: 12px 16px;
+  -fx-border-radius: 3px;
+  -fx-background-radius: 3px;
+
+  &:focus-visible {
+    @include common.focusRingStyle();
+  }
+
+}

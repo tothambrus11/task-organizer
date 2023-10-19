@@ -1,0 +1,16 @@
+@use "../common";
+
+.ShareButton {
+  -fx-background-color: #0C8CE9;
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-font-family: common.$app-font-medium;
+  -fx-background-radius: 5;
+  -fx-border-radius: 5;
+  -fx-pref-width: 66px;
+  -fx-pref-height: 39px;
+}
+
+.ShareButton:focus-visible {
+  @include common.focusRingStyle();
+}

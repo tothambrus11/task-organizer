@@ -1,0 +1,68 @@
+plugins {
+    id 'application'
+    id "org.openjfx.javafxplugin" version "0.0.11"
+	id 'java'
+	id 'com.github.johnrengelman.shadow' version '7.1.2'
+	id 'io.miret.etienne.sass' version '1.4.2'
+}
+application {
+    mainClass = 'client.Main'
+	version = "1.0.0"
+}
+
+javafx {
+    version = "19.0.2.1"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+
+shadowJar {
+	manifest {
+		attributes 'Main-Class': application.mainClass
+	}
+	destinationDirectory.set(file("$System.env.SCENE_BUILDER_LIB_PATH"))
+}
+
+dependencies {
+	implementation project(":commons")
+	
+	implementation group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '3.0.3'
+	implementation group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '3.0.3'
+	implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '3.1.1'
+	
+	implementation group: 'jakarta.activation', name: 'jakarta.activation-api', version: '2.0.1'
+	
+	implementation 'com.google.inject:guice-bom:5.1.0'
+	implementation 'com.google.inject.extensions:guice-assistedinject:5.1.0'
+
+	implementation 'org.openjfx:javafx-controls:19.0.2.1'
+	implementation 'org.openjfx:javafx-fxml:19.0.2.1'
+	implementation 'com.github.kiprobinson:bigfraction:1.1.0-java7'
+
+
+	implementation 'group': 'org.springframework.boot', name: 'spring-boot-starter-websocket', version: '2.7.8'
+
+	testImplementation 'org.mockito:mockito-core:5.2.0'
+	testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0'
+
+}
+
+compileSass {
+	// Directory where to output generated CSS:
+	outputDir = project.file("${buildDir}/resources/main/client")
+
+	loadPath project.file('/builds/cse1105/2022-2023/teams/oopp-team-50/client/.gradle/sass/1.54.0/dart-sass')
+
+	// Sub path where to copy generated CSS, eg relative to war root:
+	destPath = "."
+
+	// Source directory containing sass to compile:
+	sourceDir = project.file("${projectDir}/src/main/resources/client")
+}
+
+// Only compile sass when we are not running the build on the CI. For some reason the sass executable couldn't be executed there.
+if (!System.getenv("IS_CI_RUNNING")?.equals("true")) {
+	System.out.println("CI IS NOT RUNNING")
+	processResources.dependsOn(compileSass)
+}
+

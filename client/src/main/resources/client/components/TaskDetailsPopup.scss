@@ -1,0 +1,70 @@
+@use "../common";
+
+
+.detailsTitle {
+  -fx-font-size: 16px;
+  -fx-font-family: common.$app-font-regular;
+  -fx-fill: common.$text-foreground-default !important;
+}
+
+.TagView {
+  -fx-background-radius: 3px;
+  -fx-alignment: center;
+  -fx-padding: 0 2px 0 7px;
+
+  .text {
+    -fx-font-family: common.$app-font-regular;
+    -fx-font-size: 14px;
+    -fx-fill: white !important;
+    -fx-padding: 2px;
+  }
+
+  .removeButton {
+    -fx-opacity: 0.7;
+  }
+
+  &:hover .removeButton {
+    -fx-opacity: 1;
+  }
+}
+
+
+.SubTaskList {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-border-width: 0px !important;
+  -fx-padding: 2px 0px !important;
+}
+
+.SubTaskCellContent {
+
+  .titleField {
+    -fx-border-color: transparent;
+  }
+
+
+  .thingToHide {
+    -fx-opacity: 0;
+  }
+
+  &:hover, &.focusedRow {
+    .thingToHide {
+      -fx-opacity: 1;
+    }
+
+    .titleField {
+      -fx-border-color: common.$light-border;
+
+      &:focused {
+        -fx-border-color: common.$border-focused;
+      }
+    }
+  }
+}
+
+.SubTaskCell {
+  -fx-background-color: transparent;
+  -fx-border-color: transparent;
+  -fx-border-width: 0px;
+  -fx-padding: 0px;
+}

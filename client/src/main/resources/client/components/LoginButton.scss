@@ -1,0 +1,14 @@
+@use "../common";
+
+.LoginButton{
+  -fx-background-color: common.$dark-button-bg;
+  -fx-text-fill: white;
+  -fx-border-radius: 3;
+  -fx-font-family: common.$app-font-medium;
+  -fx-pref-width: 203px;
+  -fx-pref-height: 43px;
+  -fx-font-size: 16px;
+}
+.LoginButton:focus-visible {
+  @include common.focusRingStyle();
+}

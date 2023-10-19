@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.AutoSizedTextArea?>
+<?import client.components.IconButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml">
+
+    <padding>
+        <Insets bottom="4"/>
+    </padding>
+
+    <AnchorPane fx:id="dropAreaTop"
+                prefHeight="0"
+                opacity="0"
+                minHeight="-Infinity">
+        <HBox styleClass="drop-area"
+              AnchorPane.bottomAnchor="8"
+              AnchorPane.topAnchor="0"
+              AnchorPane.leftAnchor="0"
+              AnchorPane.rightAnchor="0"
+              minHeight="-Infinity"
+              prefHeight="0"
+              maxHeight="0"
+              alignment="CENTER">
+            <Text text="Drop Here" style="-fx-fill: #C0C0C0; -fx-font-size: 16px;"/>
+        </HBox>
+    </AnchorPane>
+
+
+    <VBox styleClass="task-card" fx:id="card" minHeight="-Infinity">
+        <AnchorPane minHeight="-Infinity">
+            <VBox AnchorPane.rightAnchor="0"
+                  AnchorPane.leftAnchor="0"
+                  AnchorPane.topAnchor="0"
+                  AnchorPane.bottomAnchor="0">
+                <AutoSizedTextArea fx:id="title" styleClass="task-title"/>
+            </VBox>
+            <IconButton
+                    fx:id="editButton"
+                    size="SMALL"
+                    source="/client/icons/edit_small.png"
+                    AnchorPane.topAnchor="14"
+                    AnchorPane.rightAnchor="12"/>
+
+            <Circle fx:id="descriptionIndicator" AnchorPane.leftAnchor="7" AnchorPane.topAnchor="24" fill="black"
+                    stroke="transparent" radius="2"/>
+        </AnchorPane>
+        <VBox fx:id="tagListContainer"/>
+        <VBox fx:id="progressContainer"/>
+    </VBox>
+
+    <AnchorPane fx:id="dropAreaBottom"
+                prefHeight="0"
+                minHeight="-Infinity"
+                opacity="0">
+        <HBox styleClass="drop-area"
+              AnchorPane.bottomAnchor="0"
+              AnchorPane.topAnchor="8"
+              AnchorPane.leftAnchor="0"
+              AnchorPane.rightAnchor="0"
+              minHeight="-Infinity"
+              prefHeight="0"
+              maxHeight="0"
+              alignment="CENTER"
+              style="-fx-background-color: #fffa;
+                     -fx-background-radius: 5px;
+                     -fx-border-color: #C1C1C1;
+                     -fx-border-width: 2px;
+                     -fx-border-style: dashed;
+                     -fx-border-radius: 5px; ">
+            <Text text="Drop Here" style="-fx-fill: #C0C0C0; -fx-font-size: 16px;"/>
+        </HBox>
+    </AnchorPane>
+
+</fx:root>

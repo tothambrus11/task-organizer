@@ -1,0 +1,20 @@
+@use "../common";
+
+.TagCellContent {
+  -fx-background-color: transparent;
+  -fx-background-radius: 3px;
+}
+
+.TagCellContent:hover {
+  -fx-background-color: common.$hover-color-nontransparent;
+  -fx-background-radius: 3px;
+}
+
+.TagCellText {
+  -fx-font-family: common.$app-font-medium;
+  -fx-font-size: 16px;
+  -fx-border-width: 0px;
+  -fx-box-border: transparent;
+  -fx-background-color: transparent !important;
+  -fx-padding: 0px;
+}

@@ -1,0 +1,18 @@
+@use "../common";
+
+.round-color-picker .circle {
+  -fx-stroke: transparent;
+  -fx-stroke-width: 2;
+  -fx-stroke-type: outside;
+  -fx-stroke-dash-array: 4 4;
+  -fx-stroke-line-cap: butt;
+}
+.round-color-picker .circle:focus-visible {
+  -fx-stroke: common.$focus-color !important;
+}
+
+.color-picker .color-palette-region .color-palette > .hyperlink {
+  -fx-display: none !important;
+  visibility: hidden !important;
+  -fx-pref-height: 0px !important;
+}

@@ -1,0 +1,27 @@
+@use "../common";
+
+
+.TextFieldSharePopup {
+  -fx-focus-color: transparent;
+  -fx-faint-focus-color: transparent;
+  -fx-text-box-border: transparent;
+  -fx-box-border: transparent;
+  -fx-border-width: 0px;
+  -fx-effect: null;
+  -fx-background-color: transparent;
+  -fx-font-size: 16px;
+  -fx-font-family: common.$app-font-regular;
+}
+
+.ShareWorkspacePopupContent {
+  -fx-padding: 12px;
+  -fx-background-radius: 5px;
+  -fx-background-color: white;
+
+  .ShareWorkspacePopupContentLabel {
+    -fx-font-family: common.$app-font-regular;
+    -fx-font-size: 16px !important;
+  }
+}
+
+

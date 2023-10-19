@@ -1,0 +1,20 @@
+@use "../common";
+
+.TextButton {
+  -fx-background-color: transparent;
+  -fx-font-family: common.$app-font-medium;
+  -fx-background-radius: 3px;
+  -fx-bordrr-radius: 3px;
+  -fx-text-fill: common.$text-foreground-default;
+  -fx-font-size: 12px;
+}
+
+
+.TextButton:focus-visible {
+  @include common.focusRingStyle();
+}
+
+.TextButton:hover {
+  -fx-background-color: common.$hover-color-nontransparent;
+  -fx-text-fill: common.$button-foreground-hovered;
+}

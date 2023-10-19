@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<fx:root style="-fx-padding: 0; -fx-background-color: white; -fx-background-insets: 0"
+         type="Button" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <StackPane>
+            <Pane fx:id="backgroundColorPane"/>
+            <Pane fx:id="foregroundColorPane" blendMode="ADD">
+                <Pane fx:id="invertedContainer" blendMode="MULTIPLY" style="-fx-background-color: white;"/>
+            </Pane>
+        </StackPane>
+    </graphic>
+</fx:root>

@@ -1,0 +1,28 @@
+$focus-color: #2084BD;
+$focus-ring-width: 2px;
+$focus-style: dashed;
+
+$app-font-regular: "Inter Regular";
+$app-font-medium: "Inter Medium";
+$app-font-semi-bold: "Inter SemiBold";
+$app-font-bold: "Inter Bold";
+
+
+
+$dark-button-bg: #2F373E;
+$light-border: #DCDCDC;
+$border-focused: black;
+$hover-color-nontransparent: #F4F3F3;
+$tags-button: #D61A1A;
+$input-placeholder-color: #9D9D9D;
+
+$text-foreground-default: #928383;
+$button-foreground-hovered: #4F4C4C;
+
+@mixin focusRingStyle {
+  -fx-border-color: $focus-color !important;
+  -fx-border-style: $focus-style;
+  -fx-border-width: $focus-ring-width;
+  -fx-border-insets: -$focus-ring-width;
+}
+

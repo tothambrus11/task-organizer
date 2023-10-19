@@ -1,0 +1,10 @@
+@use "../common";
+
+.tooltip {
+  -fx-background-color: #343434;
+  -fx-background-radius: 3px;
+  -fx-text-fill: white;
+  -fx-padding: 3px 10px;
+  -fx-font-family: common.$app-font-medium;
+  -fx-font-size: 16px;
+}

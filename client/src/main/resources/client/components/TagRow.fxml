@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.RoundColorPicker?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TextField?>
+<?import client.components.IconButton?>
+<?import javafx.scene.layout.VBox?>
+<fx:root type="VBox" prefWidth="1.0" xmlns="http://javafx.com/javafx/19"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <HBox style="-fx-padding: 6px 12px; -fx-spacing: 12px;">
+        <children>
+            <HBox fx:id="hBoxForText" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                <children>
+                    <TextField styleClass="TagCellText" fx:id="textFieldInput" style="-fx-background-color: red"/>
+                </children>
+            </HBox>
+            <HBox style="-fx-spacing: 12px;" alignment="CENTER">
+                <children>
+                    <IconButton fx:id="editButton" source="/client/icons/edit_small.png" size="SMALL" opacity="0.0" minWidth="24" minHeight="24"/>
+                    <RoundColorPicker fx:id="roundColorPicker" maxHeight="24" prefWidth="24"/>
+                </children>
+            </HBox>
+        </children>
+    </HBox>
+</fx:root>

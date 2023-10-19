@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<fx:root type="AnchorPane" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         prefHeight="24.0" maxWidth="24.0" style="-fx-background-color: transparent">
+    <ColorPicker fx:id="colorPicker" visible="false" opacity="0.0" maxWidth="0.0" maxHeight="0.0"/>
+    <Circle styleClass="circle" fill="black" radius="12" fx:id="colorCircle" layoutX="12" layoutY="12" AnchorPane.rightAnchor="0.0">
+        <effect>
+            <DropShadow radius="8" color="#00000003"/>
+        </effect>
+    </Circle>
+</fx:root>

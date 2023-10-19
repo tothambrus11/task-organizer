@@ -1,0 +1,22 @@
+@use "../common";
+
+
+.JoinInputComponent{
+  -fx-background-color: common.$light-border;
+  -fx-background-radius: 0 3px 3px 0;
+  -fx-border-width: 0px;
+  -fx-font-size: 14px;
+  -fx-padding: 0px;
+}
+
+.JoinInputComponent:focus-visible {
+  @include common.focusRingStyle();
+}
+
+.JoinInputIsFocused{
+  -fx-background-color: common.$dark-button-bg;
+}
+
+.JoinInputNotFocused{
+  -fx-background-color: common.$light-border;
+}

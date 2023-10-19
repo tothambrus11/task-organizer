@@ -1,0 +1,13 @@
+@use "../common";
+
+.TagsButton{
+  -fx-cell-size: 37px 21px;
+  -fx-background-color: common.$tags-button;
+  -fx-background-radius: 3px;
+  -fx-font-family: common.$app-font-medium;
+  -fx-font-size: 14px;
+  -fx-text-fill: white;
+}
+.TagsButton:focus-visible {
+  @include common.focusRingStyle();
+}

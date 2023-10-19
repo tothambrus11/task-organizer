@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.KeyJoinText?>
+<?import client.components.TextInput?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="299.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" fx:controller="client.scenes.AdminLoginScene" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" maxWidth="400.0" spacing="10.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" x="160.5">
+               <image>
+                  <Image url="@/client/images/team_logo.png" />
+               </image>
+            </ImageView>
+            <TextInput fx:id="serverAddress" alignment="CENTER" promptText="Server Address.." />
+            <KeyJoinText fx:id="password" alignment="CENTER" promptText="Admin Password..." />
+            <Button fx:id="login" mnemonicParsing="false" styleClass="LoginButton" text="Log in" />
+            <Button fx:id="button" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="&lt;- User Login" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

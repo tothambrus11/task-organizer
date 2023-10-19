@@ -1,0 +1,15 @@
+@use "../common";
+
+.MySwitch .knob{
+   &:focus-visible {
+     @include common.focusRingStyle;
+   }
+
+  -fx-pref-width: 18px;
+  -fx-pref-height: 18px;
+  -fx-background-radius: 9px;
+  -fx-border-radius: 9px;
+  -fx-background-color: white;
+
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.45), 6, 0, 0, 0);
+}

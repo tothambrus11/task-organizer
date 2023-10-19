@@ -1,0 +1,33 @@
+@use "components/TextInput";
+@use "components/IconButton";
+@use "components/TaskList";
+@use "components/AddButton";
+@use "components/NewBoardButton";
+@use "components/LoginButton";
+@use "components/RoundColorPicker";
+@use "components/JoinInputComponent";
+@use "components/TagList";
+@use "components/TagCellContent";
+@use "components/AutoSizedTextArea";
+@use "components/ShareButton";
+@use "components/PopUp";
+@use "views/Workspace";
+@use "components/TagsButton";
+@use "components/SharePopup";
+@use "components/SimplePopup";
+@use "components/MySwitch";
+@use "components/TextButton";
+@use "components/BottomActionBar";
+@use "components/Scrollbars";
+@use "components/TaskDetailsPopup";
+@use "components/ComboBox";
+@use "components/ShareWorkspacePopupContent";
+@use "components/Tooltip";
+@use "views/TagHighlightOnCard";
+@use "views/CustomizationPopup";
+@use "views/HighlightListView";
+@use "common";
+
+.text, .text-area, .text-field {
+  -fx-font-family: common.$app-font-regular;
+}

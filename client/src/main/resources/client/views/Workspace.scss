@@ -1,0 +1,46 @@
+@use "../common";
+
+.WorkspaceView {
+  -fx-border-width: common.$focus-ring-width;
+  -fx-border-color: transparent;
+  -fx-background-color: white;
+}
+
+.WorkspaceView:focus-visible {
+  @include common.focusRingStyle();
+  -fx-border-insets: 0px;
+}
+
+.BoardPreviewCell {
+  -fx-background-color: white;
+  -fx-padding: 0px 32px;
+
+  .IconButton {
+    visibility: hidden;
+  }
+
+  &:hover, &:selected, &:focus-within {
+    .IconButton {
+      visibility: visible;
+    }
+  }
+
+  .BoardPreview {
+    -fx-border-color: #DCDCDC;
+    -fx-border-width: 1 0 0 0;
+    -fx-background-insets: -1px -8px;
+    -fx-background-color: white;
+  }
+
+  .BoardPreview:hover {
+    -fx-border-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-background-color: common.$hover-color-nontransparent;
+  }
+
+  &:selected > .BoardPreview {
+    -fx-border-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-background-color: #e5f4ff;
+  }
+}

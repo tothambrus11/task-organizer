@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.AddButton?>
+<?import client.components.AutoSizedTextArea?>
+<?import client.components.IconButton?>
+<?import javafx.scene.layout.*?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml">
+    <AnchorPane fx:id="titleContainer" maxWidth="300">
+        <AutoSizedTextArea
+                fx:id="title" styleClass="task-list-title"
+                AnchorPane.topAnchor="0"
+                AnchorPane.rightAnchor="0"
+                AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0"/>
+        <IconButton
+                fx:id="deleteListButton"
+                size="SMALL"
+                source="/client/icons/delete_small.png"
+                AnchorPane.rightAnchor="15"
+                AnchorPane.topAnchor="15"
+        />
+    </AnchorPane>
+    <VBox fx:id="listContainer"/>
+
+    <AnchorPane fx:id="addButtonContainer"/>
+</fx:root>

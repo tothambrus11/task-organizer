@@ -1,0 +1,13 @@
+@use "../common";
+
+.IconButton {
+  -fx-padding: 0 !important;
+  -fx-background-color: transparent !important;
+  -fx-background-insets: 0 !important;
+  -fx-background-radius: 0px !important;
+  -fx-border-radius: 3px !important;
+}
+
+.IconButton:focus-visible {
+  @include common.focusRingStyle();
+}

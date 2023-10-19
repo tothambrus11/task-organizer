@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.IconButton?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<fx:root type="VBox" style="-fx-background-radius: 5;"
+         xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane fx:id="anchorPane" prefHeight="364.0" prefWidth="271.0" style="-fx-background-radius: 5;">
+            <children>
+                <VBox alignment="CENTER" style="-fx-spacing: 26px; " AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="25.0">
+                    <children>
+                        <Text styleClass="popup-title" strokeType="OUTSIDE" strokeWidth="0.0" text="Tags"/>
+                        <Text fx:id="text2" styleClass="NoTagsText" fill="#928383" strokeType="OUTSIDE"
+                              strokeWidth="0.0" text="No tags yet"/>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER" layoutX="117.0" layoutY="338.0" prefHeight="24.0" prefWidth="52.0">
+                    <children>
+                        <IconButton fx:id="addButton" size="SMALL" source="/client/icons/add_button_small.png"/>
+                        <IconButton fx:id="removeButton" size="SMALL" source="/client/icons/remove_button_small.png"/>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

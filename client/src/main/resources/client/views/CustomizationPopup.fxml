@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import client.components.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<fx:root type="VBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml" prefWidth="350" prefHeight="400" styleClass="CustomizationPopup" spacing="6">
+    <HBox alignment="CENTER" style="-fx-padding: 16 0 0 0">
+        <Text text="Customization" styleClass="popup-title"/>
+    </HBox>
+
+    <!-- Header -->
+    <HBox alignment="CENTER" styleClass="normal-row">
+        <Region HBox.hgrow="ALWAYS"/>
+        <HBox prefWidth="64">
+            <HBox prefWidth="24" prefHeight="24" alignment="CENTER">
+                <Text text="B" fx:id="backgroundLabel"/>
+            </HBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox prefWidth="24" prefHeight="24" alignment="CENTER">
+                <Text text="F" fx:id="foregroundLabel"/>
+            </HBox>
+        </HBox>
+    </HBox>
+
+    <!-- Board colours -->
+    <HBox alignment="CENTER" styleClass="normal-row" spacing="8">
+        <VBox HBox.hgrow="ALWAYS">
+            <Text text="Board colours:"/>
+        </VBox>
+        <IconButton fx:id="resetBoardColorsButton" source="/client/icons/reset_defaults.png" size="SMALL"/>
+        <HBox prefWidth="64">
+            <RoundColorPicker fx:id="boardBackgroundColorPicker"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <RoundColorPicker fx:id="boardForegroundColorPicker"/>
+        </HBox>
+    </HBox>
+
+    <!-- List colours -->
+    <HBox alignment="CENTER" styleClass="normal-row" spacing="8">
+        <VBox HBox.hgrow="ALWAYS">
+            <Text text="List colours:"/>
+        </VBox>
+        <IconButton fx:id="resetListColorsButton" source="/client/icons/reset_defaults.png" size="SMALL"/>
+        <HBox prefWidth="64">
+            <RoundColorPicker fx:id="listBackgroundColorPicker"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <RoundColorPicker fx:id="listForegroundColorPicker"/>
+        </HBox>
+    </HBox>
+
+    <!-- Highlight colours -->
+    <HBox style="-fx-padding: 0 0 0 12px">
+        <Text text="Task highlights:"/>
+    </HBox>
+    <HBox fx:id="listContainer" VBox.vgrow="ALWAYS"/>
+    <HBox spacing="4" alignment="CENTER">
+        <IconButton fx:id="addHighlightButton" source="/client/icons/add_small.png" size="SMALL"/>
+        <IconButton fx:id="removeHighlightButton" source="/client/icons/remove_button_small.png" size="SMALL"/>
+        <IconButton fx:id="makeDefaultButton" source="/client/icons/check_small.png" size="SMALL"/>
+    </HBox>
+</fx:root>
